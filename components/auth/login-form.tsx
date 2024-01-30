@@ -24,6 +24,8 @@ import Link from "next/link";
 
 export function LoginForm() {
   const searchParams = useSearchParams();
+  const callbackUrl = searchParams.get("callbackUrl");
+
   searchParams.get("error") === "OAuthAccountNotLinked";
   //When a user tries to login with a provider that has the same email associated with a different provider already used (eg, user initially logged in using GitHub with john@test.com and then tries to login with Google using john@test.com) we see login?error=OAuthAccountNotLinked in the URL and we can get this from searchParams and then pass a custom error to the login form.
   const urlError =
@@ -49,7 +51,7 @@ export function LoginForm() {
     setSuccess("");
 
     startTransition(() => {
-      login(values)
+      login(values, callbackUrl)
         .then((data) => {
           if (data?.error) {
             form.reset();
