@@ -25,18 +25,20 @@ export default function MarrowPrelimReport({
 
   function renderPeripheralSmearText() {
     if (peripheralSmear === "received") {
-      return <p>A Wright's stained peripheral smear is reviewed.</p>;
+      return <p>A Wright&apos;s stained peripheral smear is reviewed.</p>;
     } else if (peripheralSmear === "notReceived") {
       return (
-        <p>A Wright's stained peripheral smear is not available for review.</p>
+        <p>
+          A Wright&apos;s stained peripheral smear is not available for review.
+        </p>
       );
     } else if (peripheralSmear === "normal") {
       return (
         <p>
-          A Wright's stained peripheral smear is reviewed. The erythrocytes,
-          leukocytes, and platelets are generally morphologically normal in
-          appearance and adequate in number. There are no circulating blasts,
-          plasma cells, or abnormal lymphocytes.
+          A Wright&apos;s stained peripheral smear is reviewed. The
+          erythrocytes, leukocytes, and platelets are generally morphologically
+          normal in appearance and adequate in number. There are no circulating
+          blasts, plasma cells, or abnormal lymphocytes.
         </p>
       );
     } else if (peripheralSmear === "peripheralSmearCustomText") {

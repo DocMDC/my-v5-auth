@@ -9,7 +9,7 @@ import { toast } from "sonner";
 import { admin } from "@/actions/admin";
 // import { currentRole } from "@/lib/auth";
 
-export default async function AdminPage() {
+export default function AdminPage() {
   const onServerActionClick = () => {
     admin().then((data) => {
       if (data.error) {
