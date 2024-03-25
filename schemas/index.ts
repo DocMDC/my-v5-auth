@@ -70,3 +70,14 @@ export const RegisterSchema = z.object({
     message: "Name is required",
   }),
 });
+
+export const MarrowReportSchema = z.object({
+  finalDiagnosis: z.string(),
+  impression: z.string(),
+  wbc: z.number().nullable(),
+  hgb: z.number().nullable(),
+  plt: z.number().nullable(),
+  mcv: z.number().nullable(),
+  rdw: z.number().nullable(),
+  peripheralSmear: z.string().nullable(),
+});
